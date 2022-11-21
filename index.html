@@ -523,7 +523,7 @@ h2, .box p {
   
 <br><br><br>
     
-<img src="logo.png" class="img-fluid my-3">
+<img src="logo.png" width="80" class="img-fluid my-3">
 
 <br><br>
 <h1>2 SEGREDOS PRA VOCÊ TOCAR GAITA <font color="#ff0000">RÁPIDO</font></h1>
@@ -817,7 +817,9 @@ todos!
 
 
 
-<div class="lightbox">
+
+
+  <div class="lightbox">
   <div class="box">
      <center>
       <h2>Teste 7 dias Grátis! </h2>
@@ -828,6 +830,7 @@ todos!
         </center>
   </div>
 </div>
+
 
 
 
@@ -857,7 +860,7 @@ Todos os direitos reservados.
 $('.delay').hide();
 setTimeout(function() {
 $('.delay').show();
-}, 2000 ); /* 249000 */
+}, 10000 ); /* 249000 */
 </script>
 
 
@@ -956,6 +959,10 @@ $('a.close').click(function () {
 });
 
 $('a.comprar').click(function () {
+  $('.lightbox').slideUp();
+});
+
+$('body').click(function () {
   $('.lightbox').slideUp();
 });
 
