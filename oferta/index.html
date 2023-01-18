@@ -129,6 +129,31 @@
          font-size: 12px;
          color: white;
          }
+             .pulse {
+      animation: pulse 2s 2s ease-in-out infinite;
+      animation: pulse 2s infinite;
+      }
+      @-webkit-keyframes pulse {
+      0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      }
+      70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      }
+      100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      }
+      }
+      @keyframes pulse {
+      0% {
+      transform: scale3d(1, 1, 1);
+      }
+      50% {
+      transform: scale3d(0.95, 0.95, 0.95);
+      }
+      100% {
+      transform: scale3d(1, 1, 1);
+      }
       </style>
    </head>
    <body>
@@ -149,7 +174,7 @@
                      <div style="width:800px; height: 43px; background: transparent; opacity: 1; z-index:2; margin-top: -43px; position:relative;"></div>
 
                   </div>
-                  <div id="btn" class="delay mt-3" style="display:none;">
+                  <div id="btn" class="delay mt-3 pulse" style="display:none;">
                      <a target="_blank" href="
                         https://checkout.mycheckout.com.br/checkout/63c54812727426006f1394a8
                         " class="a-btn" style="text-decoration: none;">
