@@ -31,10 +31,44 @@
   src="https://www.facebook.com/tr?id=223118856764481&ev=PageView&noscript=1"
 /></noscript>
 
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+   <script>
+      window._wq = window._wq || [];
+      // target our video by the first 3 characters of the hashed ID
+      _wq.push({
+        id: "d9dwsfoqv8",
+        onReady: function(video) {
+          // at 300 seconds (5min x 60 = 300), do something amazing
+          video.bind('secondchange', function(s) {
+            if (s >= 2) {
+              // Insert code to do something amazing here
+              // console.log("We just reached " + s + " seconds!");
+              $("#mybutton").addClass("ShowMeButton");
+            }
+          });
+        }
+      });
+      
+   </script>
+
       
       
       <style>
          body { background: #06070B; margin:0; }
+
+                  #mybutton {
+         opacity: 0;
+         display: none;
+         }
+         #mybutton.ShowMeButton {
+         opacity: 1;
+         display: block;
+         }
+
+
          .pc {
          display: block;
          }
@@ -44,15 +78,17 @@
          #botao { width: 60%;  }
          .topo { max-width:60%; margin: 0; height: 60px; }
 
-   .video {
+   .videowistia {
          aspect-ratio: 16 / 9;
          width: 100%;
          }
 
+.espaco { margin-top: 100px; }
 
          @media (min-width: 540px) {
 
-               .video {
+.espaco { margin-top: 20px; }
+               .videowistia {
          aspect-ratio: 16 / 9;
          width: 55%;
          }
@@ -191,23 +227,26 @@
       </style>
    <body onload="checkCookie()"></body>
    <center>
-   <br><br><br>
-
+  
+<div class="espaco">
 <img src="logo.png" width="80">
 
 <h1>A ÚNICA FORMAÇÃO COMPLETA PRA VOCÊ <font color="#FFFF00"><br>TOCAR GAITA</font> E TER <font color="#FFFF00">SUCESSO</font> NA MÚSICA</h1>
+</div>
        <br>
 
 
-<div class="video">
+<div class="videowistia">
 
 <script src="https://fast.wistia.com/embed/medias/d9dwsfoqv8.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_d9dwsfoqv8 videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/d9dwsfoqv8/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
 
 </div>
 
 
+   <div id="mybutton" class="footer" style="">
+
    <div style="width:90%; height: 43px; background: transparent; opacity: 1; z-index:2; margin-top: -43px; position:relative;"></div>
-   <div id="botao" class="pulse delay" style="display: none; margin-top: 10px;">
+   <div id="botao" class="pulse" style="margin-top: 10px;">
       <a target="_blank" href="
         https://checkout.mycheckout.com.br/checkout/63c54812727426006f1394a8
          " class="a-botao" style="text-decoration: none;">
@@ -217,8 +256,11 @@
       </span>
       </a>
    </div>
+
+      </div>
+      
    <div style="font-family: 'Roboto Condensed', 'Arial', sans-serif; font-size: 14px; padding: 20px 0px 20px 0px; color: #999;">
-      Copyright © <span id="year"></span> Academia do Acordeon
+      <span id="year"></span> © Academia do Acordeon
       <!-- Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</b> Depois que você sair do
          Facebook, a responsabilidade não é deles e sim do nosso site. -->
    </div>
@@ -271,7 +313,7 @@
       $('.delay').hide();
       setTimeout(function() {
       $('.delay').show();
-      }, 258000 ); /* 258000 */         
+      }, 0 ); /* 258000 */         
    </script>
    <script>
       function setCookie(cname,cvalue,exdays) {
