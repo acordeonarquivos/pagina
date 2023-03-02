@@ -210,7 +210,7 @@
    <center>
    <div class="espaco">
       <img src="logo.png" width="80">
-      <h1>A ÚNICA FORMAÇÃO COMPLETA PRA VOCÊ <font color="#FF0000"><br>TOCAR GAITA</font> E TER <font color="#FF0000">SUCESSO</font> NA MÚSICA</h1>
+      <h1>A ÚNICA FORMAÇÃO COMPLETA PRA VOCÊ <font color="#FFFF00"><br>TOCAR GAITA</font> E TER <font color="#FFFF00">SUCESSO</font> NA MÚSICA</h1>
    </div>
    <br>
    <div class="videowistia">
@@ -319,6 +319,7 @@
       function checkCookie() {
         let user = getCookie("username");
         if (user != "") {
+         $("#mybutton").addClass("ShowMeButton");
              $('.delay').show();
                /*document.write("<h1>tem cookie</h1>");*/
         } else {
