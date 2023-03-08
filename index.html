@@ -821,16 +821,8 @@ document.getElementById('year').innerHTML = year;</script>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
+ <script>document.addEventListener("contextmenu", e => e.preventDefault());</script>
 
-<script>$('.navegar a[href^="#"]').on('click', function(e) {
-  e.preventDefault();
-  var id = $(this).attr('href'),
-      targetOffset = $(id).offset().top;
-      
-  $('html, body').animate({ 
-    scrollTop: targetOffset - 0
-  }, 500);
-});</script>
 
 
 
